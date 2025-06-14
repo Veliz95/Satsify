@@ -1,11 +1,43 @@
-echo # Python >> .gitignore
-echo __pycache__/ >> .gitignore
-echo *.pyc >> .gitignore
-echo >> .gitignore
-echo # Virtual Environment >> .gitignore
-echo venv/ >> .gitignore
-echo env/ >> .gitignore
-echo >> .gitignore
-echo # IDE specific files >> .gitignore
-echo .vscode/ >> .gitignore
-echo .idea/ >> .gitignore
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.env/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Project specific
+temp/
+scratch/
+
