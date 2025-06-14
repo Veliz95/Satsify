@@ -1,0 +1,11 @@
+echo # Python >> .gitignore
+echo __pycache__/ >> .gitignore
+echo *.pyc >> .gitignore
+echo >> .gitignore
+echo # Virtual Environment >> .gitignore
+echo venv/ >> .gitignore
+echo env/ >> .gitignore
+echo >> .gitignore
+echo # IDE specific files >> .gitignore
+echo .vscode/ >> .gitignore
+echo .idea/ >> .gitignore

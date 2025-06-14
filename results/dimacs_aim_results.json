@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "total_instances": 4,
+    "successful_instances": 4,
+    "failed_instances": 0,
+    "average_parsing_time_ms": 0.5098500000713102,
+    "average_transformation_time_ms": 0.19892499994966784,
+    "average_total_time_ms": 0.708775000020978,
+    "median_total_time_ms": 0.6817999999384483,
+    "min_total_time_ms": 0.6664000002274406,
+    "max_total_time_ms": 0.8050999999795749
+  },
+  "results": [
+    {
+      "instance_name": "aim-50-1_6-no-1.cnf",
+      "parsing_time_ms": 0.5900999999539636,
+      "transformation_time_ms": 0.21500000002561137,
+      "total_time_ms": 0.8050999999795749,
+      "memory_usage_bytes": 1199,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "aim-50-1_6-no-2.cnf",
+      "parsing_time_ms": 0.4979000000275846,
+      "transformation_time_ms": 0.1940000001923181,
+      "total_time_ms": 0.6919000002199027,
+      "memory_usage_bytes": 1204,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "aim-50-1_6-yes1-1.cnf",
+      "parsing_time_ms": 0.4694000003837573,
+      "transformation_time_ms": 0.19699999984368333,
+      "total_time_ms": 0.6664000002274406,
+      "memory_usage_bytes": 1199,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "aim-50-1_6-yes1-2.cnf",
+      "parsing_time_ms": 0.48199999991993536,
+      "transformation_time_ms": 0.18969999973705853,
+      "total_time_ms": 0.6716999996569939,
+      "memory_usage_bytes": 1189,
+      "success": true,
+      "error_message": ""
+    }
+  ]
+}

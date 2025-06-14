@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "total_instances": 1,
+    "successful_instances": 1,
+    "failed_instances": 0,
+    "average_parsing_time_ms": 0.5077999999230087,
+    "average_transformation_time_ms": 0.20229999972798396,
+    "average_total_time_ms": 0.7100999996509927,
+    "median_total_time_ms": 0.7100999996509927,
+    "min_total_time_ms": 0.7100999996509927,
+    "max_total_time_ms": 0.7100999996509927
+  },
+  "results": [
+    {
+      "instance_name": "hole6.cnf",
+      "parsing_time_ms": 0.5077999999230087,
+      "transformation_time_ms": 0.20229999972798396,
+      "total_time_ms": 0.7100999996509927,
+      "memory_usage_bytes": 1631,
+      "success": true,
+      "error_message": ""
+    }
+  ]
+}

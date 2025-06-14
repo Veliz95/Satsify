@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "total_instances": 1,
+    "successful_instances": 1,
+    "failed_instances": 0,
+    "average_parsing_time_ms": 0.4162000000178523,
+    "average_transformation_time_ms": 0.1689000000624219,
+    "average_total_time_ms": 0.5851000000802742,
+    "median_total_time_ms": 0.5851000000802742,
+    "min_total_time_ms": 0.5851000000802742,
+    "max_total_time_ms": 0.5851000000802742
+  },
+  "results": [
+    {
+      "instance_name": "dubois20.cnf",
+      "parsing_time_ms": 0.4162000000178523,
+      "transformation_time_ms": 0.1689000000624219,
+      "total_time_ms": 0.5851000000802742,
+      "memory_usage_bytes": 2408,
+      "success": true,
+      "error_message": ""
+    }
+  ]
+}

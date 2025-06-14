@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "total_instances": 2,
+    "successful_instances": 2,
+    "failed_instances": 0,
+    "average_parsing_time_ms": 0.7990999999947235,
+    "average_transformation_time_ms": 0.6778500001018983,
+    "average_total_time_ms": 1.4769500000966218,
+    "median_total_time_ms": 1.4769500000966218,
+    "min_total_time_ms": 1.2180000003354507,
+    "max_total_time_ms": 1.7358999998577929
+  },
+  "results": [
+    {
+      "instance_name": "CBS_k3_n100_m403_b10_1.cnf",
+      "parsing_time_ms": 0.8569999999963329,
+      "transformation_time_ms": 0.87889999986146,
+      "total_time_ms": 1.7358999998577929,
+      "memory_usage_bytes": 6129,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "CBS_k3_n100_m429_b90_1.cnf",
+      "parsing_time_ms": 0.741199999993114,
+      "transformation_time_ms": 0.4768000003423367,
+      "total_time_ms": 1.2180000003354507,
+      "memory_usage_bytes": 6559,
+      "success": true,
+      "error_message": ""
+    }
+  ]
+}

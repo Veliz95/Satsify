@@ -1,0 +1,114 @@
+{
+  "summary": {
+    "total_instances": 11,
+    "successful_instances": 11,
+    "failed_instances": 0,
+    "average_parsing_time_ms": 0.5373454545488956,
+    "average_transformation_time_ms": 0.25379999996485736,
+    "average_total_time_ms": 0.7911454545137531,
+    "median_total_time_ms": 0.7408999999825028,
+    "min_total_time_ms": 0.48770000012154924,
+    "max_total_time_ms": 1.1674000002130924
+  },
+  "results": [
+    {
+      "instance_name": "uf20-01.cnf",
+      "parsing_time_ms": 0.5522999999811873,
+      "transformation_time_ms": 0.17290000005232287,
+      "total_time_ms": 0.7252000000335102,
+      "memory_usage_bytes": 1305,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "uf20-02.cnf",
+      "parsing_time_ms": 0.40459999991071527,
+      "transformation_time_ms": 0.12239999978191918,
+      "total_time_ms": 0.5269999996926344,
+      "memory_usage_bytes": 1299,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "uf20-03.cnf",
+      "parsing_time_ms": 0.41190000001734006,
+      "transformation_time_ms": 0.15499999972234946,
+      "total_time_ms": 0.5668999997396895,
+      "memory_usage_bytes": 1288,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "uf20-04.cnf",
+      "parsing_time_ms": 0.657000000046537,
+      "transformation_time_ms": 0.2206999997724779,
+      "total_time_ms": 0.8776999998190149,
+      "memory_usage_bytes": 1288,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "uf20-05.cnf",
+      "parsing_time_ms": 0.35859999979948043,
+      "transformation_time_ms": 0.1291000003220688,
+      "total_time_ms": 0.48770000012154924,
+      "memory_usage_bytes": 1295,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "uf50-01.cnf",
+      "parsing_time_ms": 0.5527000002985005,
+      "transformation_time_ms": 0.32610000016575214,
+      "total_time_ms": 0.8788000004642527,
+      "memory_usage_bytes": 3263,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "uf50-02.cnf",
+      "parsing_time_ms": 0.7367999996858998,
+      "transformation_time_ms": 0.36339999996926053,
+      "total_time_ms": 1.1001999996551604,
+      "memory_usage_bytes": 3236,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "uf50-03.cnf",
+      "parsing_time_ms": 0.6244000001061067,
+      "transformation_time_ms": 0.2726999996411905,
+      "total_time_ms": 0.8970999997472973,
+      "memory_usage_bytes": 3251,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "uuf50-01.cnf",
+      "parsing_time_ms": 0.4828000000998145,
+      "transformation_time_ms": 0.2509000000827655,
+      "total_time_ms": 0.73370000018258,
+      "memory_usage_bytes": 3248,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "uuf50-02.cnf",
+      "parsing_time_ms": 0.4493999999795051,
+      "transformation_time_ms": 0.2915000000029977,
+      "total_time_ms": 0.7408999999825028,
+      "memory_usage_bytes": 3272,
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "instance_name": "uuf50-03.cnf",
+      "parsing_time_ms": 0.6803000001127657,
+      "transformation_time_ms": 0.4871000001003267,
+      "total_time_ms": 1.1674000002130924,
+      "memory_usage_bytes": 3253,
+      "success": true,
+      "error_message": ""
+    }
+  ]
+}
